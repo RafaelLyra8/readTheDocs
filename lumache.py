@@ -21,3 +21,21 @@ def get_random_ingredients(kind=None):
     :rtype: list[str]
     """
     return ["shells", "gorgonzola", "parsley"]
+
+
+def get_ingredient_by_kind(kind=None):
+    """
+    Return a list of random ingredients as strings.
+
+    :param kind: Optional "kind" of ingredients.
+    :type kind: str
+    :raise lumache.InvalidKindError: If the kind is invalid.
+    :return: The ingredients of the chosen "kind".
+    :rtype: list[str]
+    """
+
+    if kind == "chesse":
+        return ["mozzarela", "cheddar"]
+    elif kind == "meat":
+        return ["beef", "pork"]
+    return ["shells", "gorgonzola", "parsley"]
